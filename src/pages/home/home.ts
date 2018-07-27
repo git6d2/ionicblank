@@ -8,6 +8,7 @@ import { AlertController } from 'ionic-angular';
   templateUrl: 'home.html'
 })
 export class HomePage {
+  validacion:any="algo";/*variable ngmde*/
 
   constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
 
@@ -15,7 +16,7 @@ export class HomePage {
   showAlert() {
     let alert = this.alertCtrl.create({
       title: 'Alerta!',
-      subTitle: 'Acceso restringido!',
+      subTitle: 'Acceso restringido!'+this.validacion,
       buttons: ['OK']
     });
     alert.present();
